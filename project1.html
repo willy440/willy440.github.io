@@ -166,7 +166,7 @@ pmltrainexclu2 &lt;- pmltrainexclu2[!exclunamestemp] }
 <pre><code>##    A    B    C    D    E 
 ## 5579 3796 3422 3216 3607</code></pre>
 <p>It is distributed fairly evenly.</p>
-<p>Since I may have to try different models to get to a final one, I need to divide the given training data up into three sets - a training, validataion and test set. The test set will only be used once at the end, to make sure I am not doing something stupid.</p>
+<p>Since I may have to try different models to get to a final one, I need to divide the given training data up into three sets - a training, validation and test set. The test set will only be used once at the end, to make sure I am not doing something stupid.</p>
 <p>For validation &amp; test, this training set will be have to split into a training (60%) validation (20%) and test (20%) set, so I can tune my design on the validation set, and then run a final test on the test set.</p>
 <pre class="r"><code>inTrain &lt;- createDataPartition(pmltrainexclu2$classe,p=0.6,list=FALSE)
 pmltrain &lt;- pmltrainexclu2[inTrain,]
@@ -317,7 +317,7 @@ testing2pred</code></pre>
 }</code></pre>
 <p>by calling it with the predictor output</p>
 <pre class="r"><code>pml_write_files(testing2pred)</code></pre>
-<p>the submissions we all correct.</p>
+<p>the submissions were all correct.</p>
 
 
 </div>
